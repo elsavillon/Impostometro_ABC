@@ -6,12 +6,12 @@
     <title>Impostos Municipais - Mauá</title>
 </head>
 <body>
-    <h1>Impostos Municipais - Santo André</h1>
+    <h1>Impostos Municipais - Mauá</h1>
     <p> Confira os impostos municipais de Mauá, de 2013 a 2022, por ano:</p>
     <form>
         <label for="ano">Selecione o ano:</label>
         <select id="ano" name="ano">
-            {% for imposto in impostos_municipais %}
+            {% for imposto in sbc_impostos_municipais %}
                 <option value="{{ imposto['ano'] }}">{{ imposto['ano'] }}</option>
             {% endfor %}
         </select>

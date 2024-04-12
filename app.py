@@ -94,8 +94,8 @@ impostos_municipais = {
         {'ano': 2018, 'IPTU': 4341282.68, 'ITBS': 217712.46, 'ISS': 2850287.5},
         {'ano': 2019, 'IPTU': 5204470.91, 'ITBS': 199734.86, 'ISS': 3576792.65},
         {'ano': 2020, 'IPTU': 4989196.31, 'ITBS': 253291.22, 'ISS': 2574085.69},
-        {'ano': 2021, 'IPTU': 6278329.34, 'ITBS': 277768.41, 'ISS': 3370320.97},
-        {'ano': 2022, 'IPTU': 6244591.18, 'ITBS': 392781.14, 'ISS': 3696881.99}
+        {'ano': 2021, 'IPTU': 6278329.34, 'ITBS': 277768.41, 'ISS': 3370320.23},
+        {'ano': 2022, 'IPTU': 7187279.69, 'ITBS': 272800.3, 'ISS': 4540192.86}
     ]
 }
 
@@ -103,14 +103,25 @@ impostos_municipais = {
 def home():
     return render_template('index.html', abc=abc, sa=sa, sbc=sbc, scs=scs, diadema=diadema, maua=maua, rp=rp, rgs=rgs)
 
-
 @app.route('/busca', methods=['POST'])
 def busca():
-    municipio = request.form['abc']
-    if municipio in impostos_municipais:
-        return render_template(f'{municipio}.html', dados_impostos=impostos_municipais[municipio])
+    municipio = request.form['nome']
+    if municipio == "Santo André":
+        return render_template('sa.html', sa_impostos_municipais=impostos_municipais['sa'])
+    elif municipio == "São Bernardo do Campo":
+        return render_template('sbc.html', sbc_impostos_municipais=impostos_municipais['sbc'])
+    elif municipio == "São Caetano do Sul":
+        return render_template('scs.html', scs_impostos_municipais=impostos_municipais['scs'])
+    elif municipio == 'Diadema':
+        return render_template('diadema.html', diadema_impostos_municipais=impostos_municipais['diadema'])
+    elif municipio == 'Mauá':
+        return render_template('maua.html', maua_impostos_municipais=impostos_municipais['maua'])
+    elif municipio == "Ribeirão Pires":
+        return render_template('rp.html', rgs_impostos_municipais=impostos_municipais['rp'])
+    elif municipio == "Rio Grande da Serra":
+        return render_template('rgs.html', rgs_impostos_municipais=impostos_municipais['rgs'])
     else:
         return 'Município não encontrado.'
-    
+
 if __name__ == "__main__":
     app.run(debug=True)

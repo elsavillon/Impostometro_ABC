@@ -1,10 +1,16 @@
+<!DOCTYPE html>
 <html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo ao Impostômetro do ABC</title>
+</head>
 <body>
     <h1>Bem-vindo ao Impostômetro do ABC</h1>
     <p>Aqui você encontra a arrecadação municipal das sete cidades do ABC de 2013 a 2022.</p>
     <form action="/busca" method="post">
-        <label>Selecione o município que deseja selecionar:</label>
-        <select name="Santo André", "São Bernardo do Campo", "São Caetano do Sul", "Diadema", "Mauá", "Ribeirão Pires", "Rio Grande da Serra">
+        <label>Selecione o município que deseja consultar:</label>
+        <select name="nome">
             {% for municipio in abc %}
                 <option value="{{ municipio }}">{{ municipio }}</option>
             {% endfor %}
