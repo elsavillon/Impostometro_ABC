@@ -2,8 +2,15 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
+# Nomes dos municípios do ABC
 abc = ["Santo André", "São Bernardo do Campo", "São Caetano do Sul", "Diadema", "Mauá", "Ribeirão Pires", "Rio Grande da Serra"]
 sa = "Santo André"
+sbc = "São Bernardo do Campo"
+scs = "São Caetano do Sul"
+diadema = "Diadema"
+maua = "Mauá"
+rp = "Ribeirão Pires"
+rgs = "Rio Grande da Serra"
 
 # Dados dos impostos municipais para Santo André
 sa_impostos_municipais = [
@@ -21,9 +28,9 @@ sa_impostos_municipais = [
 
 @app.route('/')
 def home():
-    return render_template('index.html', abc=abc, sa=sa)
+    return render_template('index.html', abc=abc, sa=sa, sbc=sbc, scs=scs, diadema=diadema, maua=maua, rp=rp, rgs=rgs)
 
-@app.route('/busca', methods=['GET', 'POST'])
+@app.route('/busca', methods=['POST'])
 def busca():
     municipio = request.form['municipio']
     if municipio == "Santo André":
