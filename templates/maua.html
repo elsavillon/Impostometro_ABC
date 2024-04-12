@@ -11,7 +11,7 @@
     <form>
         <label for="ano">Selecione o ano:</label>
         <select id="ano" name="ano">
-            {% for imposto in sbc_impostos_municipais %}
+            {% for imposto in maua_impostos_municipais %}
                 <option value="{{ imposto['ano'] }}">{{ imposto['ano'] }}</option>
             {% endfor %}
         </select>
