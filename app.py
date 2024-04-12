@@ -106,7 +106,7 @@ def home():
 
 @app.route('/busca', methods=['POST'])
 def busca():
-    municipio = request.form['municipio']
+    municipio = request.form['abc']
     if municipio in impostos_municipais:
         return render_template(f'{municipio}.html', dados_impostos=impostos_municipais[municipio])
     else:
