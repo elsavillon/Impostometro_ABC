@@ -1,18 +1,15 @@
-<html>
-
+<html lang="pt">
 <body>
     <h1>Bem-vindo ao Impostômetro do ABC</h1>
-
-        <p>Aqui você encontra a arrecadação municipal das sete cidades do ABC de 2013 a 2022.</p>
+    <p>Aqui você encontra a arrecadação municipal das sete cidades do ABC de 2013 a 2022.</p>
     <form action="/busca" method="post">
         <label>Selecione o município que deseja selecionar:</label>
-        <select name="nome">
-            {% for municipio in municipios %}
-            <option value="{{municipio.id}}">{{municipio.nome}}</option>
+        <select name="Santo André", "São Bernardo do Campo", "São Caetano do Sul", "Diadema", "Mauá", "Ribeirão Pires", "Rio Grande da Serra">
+            {% for municipio in abc %}
+                <option value="{{ municipio }}">{{ municipio }}</option>
             {% endfor %}
-          </select>
+        </select>
         <button type="submit">Buscar</button>
     </form>
 </body>
-
 </html>
