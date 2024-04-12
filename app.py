@@ -106,13 +106,11 @@ def home():
 
 @app.route('/busca', methods=['POST'])
 def busca():
-    municipio = request.form['nome']
-    if municipio == "Santo André":
-        return render_template('sa.html')
-    elif municipio == "São Bernardo do Campo":
-        return render_template('sbc.html')  
+    municipio = request.form['municipio']
+    if municipio in impostos_municipais:
+        return render_template(f'{municipio}.html', dados_impostos=impostos_municipais[municipio])
     else:
         return 'Município não encontrado.'
-
+    
 if __name__ == "__main__":
     app.run(debug=True)
