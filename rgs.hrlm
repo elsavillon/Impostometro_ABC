@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impostos Municipais - Rio Grande da Serra</title>
+</head>
+<body>
+    <h1>Impostos Municipais - Santo André</h1>
+    <p> Confira os impostos municipais de Rio Grande da Serra, de 2013 a 2022, por ano:</p>
+    <form>
+        <label for="ano">Selecione o ano:</label>
+        <select id="ano" name="ano">
+            {% for imposto in impostos_municipais %}
+                <option value="{{ imposto['ano'] }}">{{ imposto['ano'] }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Consultar</button>
+    </form>
+</body>
+</html>
