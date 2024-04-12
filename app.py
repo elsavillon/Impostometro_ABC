@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/statics')
 
 abc = ["Santo André", "São Bernardo do Campo", "São Caetano do Sul", "Diadema", "Mauá", "Ribeirão Pires", "Rio Grande da Serra"]
 sa = "Santo André"
@@ -117,7 +117,7 @@ def busca():
     elif municipio == 'Mauá':
         return render_template('maua.html', maua_impostos_municipais=impostos_municipais['maua'])
     elif municipio == "Ribeirão Pires":
-        return render_template('rp.html', rgs_impostos_municipais=impostos_municipais['rp'])
+        return render_template('rp.html', rp_impostos_municipais=impostos_municipais['rp'])
     elif municipio == "Rio Grande da Serra":
         return render_template('rgs.html', rgs_impostos_municipais=impostos_municipais['rgs'])
     else:
