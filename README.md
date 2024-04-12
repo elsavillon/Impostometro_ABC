@@ -1,4 +1,4 @@
-#Impostômetro Municipal do ABC
+# Impostômetro Municipal do ABC
 Projeto final desenvolvido para o curso de Jornalismo de Dados e Automação do Insper.
 
 O intuito do projeto é analisar a arrecadação de impostos municipais (IPTU, ITBI e ISS) das 7 cidades que integram o grande ABC (Santo André, São Bernardo do Campo, São Caetano do Sul, Diadema, Mauá, Ribeirão Pires e Rio Grande da Serra), ao longo de uma década (2013 a 2022). Não foram considerados os dados de 2023, pois os municípios ainda estão no prazo para envio dos dados consolidados, podendo apresentar alterações posteriores ao informado no projeto.
