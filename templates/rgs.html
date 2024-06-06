@@ -1,43 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impostos Municipais - Rio Grande da Serra</title>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Impostos municipais de Rio Grande da Serra</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>Impostos Municipais - Rio Grande da Serra</h1>
     <p> Confira os impostos municipais de Rio Grande da Serra, de 2013 a 2022, por ano:</p>
-    <table>
-        <tr>
-            <th>Ano</th>
-            <th>IPTU</th>
-            <th>ITBS</th>
-            <th>ISS</th>
-        </tr>
-        {% for imposto in rgs_impostos_municipais %}
-        <tr>
-            <td>{{ imposto['ano'] }}</td>
-            <td>{{ imposto['IPTU'] }}</td>
-            <td>{{ imposto['ITBS'] }}</td>
-            <td>{{ imposto['ISS'] }}</td>
-        </tr>
-        {% endfor %}
-    </table>
-    <a href="/" style="display:block; margin-top: 20px;">Voltar para a página inicial</a>
+    <iframe src='https://flo.uri.sh/visualisation/18118174/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'><a class='flourish-credit' href='https://public.flourish.studio/visualisation/18118174/?utm_source=embed&utm_campaign=visualisation/18118174' target='_top' style='text-decoration:none!important'><img alt='Made with Flourish' src='https://public.flourish.studio/resources/made_with_flourish.svg' style='width:105px!important;height:16px!important;border:none!important;margin:0!important;'> </a></div>    <a href="/" style="display:block; margin-top: 20px;">Voltar para a página inicial</a>
+    <a href="/" class="button">Voltar para a página inicial</a>
 </body>
 </html>

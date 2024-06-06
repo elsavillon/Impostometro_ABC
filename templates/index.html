@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bem-vindo ao Impostômetro do ABC</title>
-</head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Impostômetro do ABC</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    </head>
 <body>
-    <h1>Bem-vindo ao Impostômetro do ABC</h1>
-    <p>Aqui você encontra a arrecadação municipal das sete cidades do ABC de 2013 a 2022.</p>
-    <form action="/busca" method="post">
-        <label>Selecione o município que deseja consultar:</label>
-        <select name="nome">
-            {% for municipio in abc %}
-                <option value="{{ municipio }}">{{ municipio }}</option>
-            {% endfor %}
-        </select>
-        <button type="submit">Buscar</button>
-    </form>
+    <header>
+        <nav>
+            <h1>BEM-VINDO AO IMPOSTÔMETRO DO ABC</h1>
+        </nav>
+    </header>
+    <main>
+        <p>Aqui você encontra a arrecadação municipal das sete cidades do ABC de 2013 a 2022.</p>
+        <form action="/busca" method="post">
+            <label>Selecione o município que deseja consultar:</label>
+            <select name="nome">
+                {% for municipio in abc %}
+                    <option value="{{ municipio }}">{{ municipio }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit" class="button">Buscar</button>
+        </form>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/ABCD_paulista.svg/800px-ABCD_paulista.svg.png" alt="Mapa do ABC Paulista" class="img-reduzida">
+    </main>
+    <footer>
+        <p>Os dados contidos na pesquisa foram extraídos do site do Siconfi - Secretaria do Tesouro Nacional (STN)</p>
+    </footer>
 </body>
 </html>
