@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 
-app = Flask(__name__, static_url_path='/statics')
+app = Flask(__name__)
 
 abc = ["Santo André", "São Bernardo do Campo", "São Caetano do Sul", "Diadema", "Mauá", "Ribeirão Pires", "Rio Grande da Serra"]
 sa = "Santo André"

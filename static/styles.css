@@ -31,15 +31,18 @@ header {
   align-items: center;
   padding: 0 40px;
   flex-shrink: 0;
-  color: #3EC2CF;
+  color: #56b7c6; 
 }
 
-header nav {
+nav {
   display: flex;
-  gap: 8px;
+  width: 100%;
+  gap: 10px;
+  align-items: center;
+  padding: 0 10px;
 }
 
-header nav a {
+nav a {
   white-space: nowrap;
 }
 
@@ -87,16 +90,17 @@ select,
   border-radius: 16px;
   border: 1px solid black;
   padding: 0 16px;
+  display: flex;
+  align-items: center;
 }
 
 select {
   flex: 1;
-  margin-right: 10px;
-  margin-left: 10px;
+  margin-right: 10px; 
 }
 
 .button {
-  background-color: #8887AC;
+  background-color: #87c6cf;
   color: white;
   font-size: 12px;
   font-weight: bold;
@@ -111,4 +115,8 @@ select {
 .img-reduzida {
   width: 400px;
   height: auto;
+}
+
+label {
+  margin-right: 10px;
 }

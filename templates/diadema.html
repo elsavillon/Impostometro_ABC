@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Impostos municipais de Diadema</title>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
-</head>
-<body>
-    <h1>Impostos Municipais - Diadema</h1>
+    <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Impostos Municipais de Diadema</title>
+            <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+        </head>
+    <body>
+        <header>
+                <h1>BEM-VINDO AO IMPOSTÔMETRO DO ABC</h1>
+        </header>
+        <nav>
+        <a href="/" class="button">Voltar</a>
+        <h1>Impostos Municipais - Diadema</h1>
+        </nav>
     <p> Confira os impostos municipais de Diadema, de 2013 a 2022, por ano:</p>
     <iframe src='https://flo.uri.sh/visualisation/18103236/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'><a class='flourish-credit' href='https://public.flourish.studio/visualisation/18103236/?utm_source=embed&utm_campaign=visualisation/18103236' target='_top' style='text-decoration:none!important'><img alt='Made with Flourish' src='https://public.flourish.studio/resources/made_with_flourish.svg' style='width:105px!important;height:16px!important;border:none!important;margin:0!important;'> </a></div>
     <a href="/" class="button">Voltar para a página inicial</a>
