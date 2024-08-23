@@ -1,0 +1,29 @@
+.tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+    font: 12px sans-serif;
+    background: lightgray;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+    display: none;
+  }
+  
+  #info {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  text {
+    font-size: 14px;
+    fill: #333;
+    pointer-events: none; 
+  }
+  
+  .highlight {
+    font-weight: bold;
+    fill: red;
+  }
+  
