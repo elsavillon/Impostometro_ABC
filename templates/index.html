@@ -8,8 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="static/mapa.css">
-    <script src="static/js/mapa.js"></script>
 </head>
 <body>
     <header>
@@ -26,6 +24,8 @@
             </select>
             <button type="submit" class="button">Buscar</button>
         </form>
+        <link rel="stylesheet" href="static/mapa.css">
+        <script src="static/js/mapa.js"></script>
         <div id="tooltip" class="tooltip"></div>
         <p id="info">…</p>
         <svg
@@ -38,7 +38,7 @@
             version="1.1"
         >
             <!-- Elementos do mapa, contorno das regiões -->
-            <g
+            <g 
                 id="g7153"
                 transform="matrix(13.318666,0,0,13.491116,-2717996.9,-1629784.7)"
                 style="
@@ -121,7 +121,7 @@
                     y="95350.789"
                     style="font-size: 5644.44461538px"
                 >
-                    São Bernardo do Campo
+                    São Bernardo
                 </tspan>
             </text>
             <text
@@ -145,17 +145,17 @@
                     stroke: none;
                     font-family: Sans;
                 "
-                x="72415.089"
-                y="122496.569"
+                x="37209.546"
+                y="145571.5"
                 id="text7678"
             >
                 <tspan
                     id="tspan7680"
-                    x="72415.089"
-                    y="122496.569"
+                    x="37209.546"
+                    y="145571.5"
                     style="font-size: 5644.44461538px"
                 >
-                    São Caetano do Sul
+                    São Caetano
                 </tspan>
             </text>
             <text
@@ -179,24 +179,28 @@
                     stroke: none;
                     font-family: Sans;
                 "
-                x="123241.228"
-                y="147850.693"
+                x="64856.043"
+                y="179505.02"
                 id="text7682"
             >
                 <tspan
                     id="tspan7684"
-                    x="123241.228"
-                    y="147850.693"
+                    x="64856.043"
+                    y="179505.02"
                     style="font-size: 5644.44461538px"
                 >
                     Santo André
                 </tspan>
             </text>
         </svg>
-        <p>Fonte: Dados do IBGE</p>
+        <div id="grafico-container">
+            <h2>Impostos por Município</h2>
+            <div id="grafico"></div>
+        </div>
     </main>
     <footer>
-        <p>Todos os direitos reservados &copy; 2024 Impostômetro do ABC</p>
+        <p>Os dados contidos na pesquisa foram extraídos do site do Siconfi - Secretaria do Tesouro Nacional (STN)
     </footer>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
 </body>
 </html>
