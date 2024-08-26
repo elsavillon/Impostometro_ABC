@@ -22,10 +22,9 @@
                 {% for municipio in abc %}
                     <option value="{{ municipio }}">{{ municipio }}</option>
                 {% endfor %}
-            </select>
-            <p> Abaixo, no mapa interativo, você também tem acesso ao total de arrecadação municipal referentes ao ano de 2023:</p>
-            <button type="submit" class="button">Buscar</button>
+            </select> <button type="submit" class="button">Buscar</button>
         </form>
+        <p> Abaixo, no mapa interativo, você também tem acesso ao total de arrecadação municipal referentes ao ano de 2023:</p>
         <div id="tooltip" class="tooltip"></div>
         
         <svg
