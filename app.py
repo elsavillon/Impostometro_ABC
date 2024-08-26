@@ -11,16 +11,6 @@ maua= "Mauá"
 rp= "Ribeirão Pires"
 rgs= "Rio Grande da Serra"
 
-impostos_municipais = {
-    'sa': dados_sa,
-    'sbc': dados_sbc,
-    'scs': dados_scs,
-    'diadema': dados_diadema,
-    'maua': dados_maua,
-    'rp': dados_rp,
-    'rgs': dados_rgs
-}
-
 @app.route('/')
 def home():
     return render_template('index.html', abc=abc, sa=sa, sbc=sbc, scs=scs, diadema=diadema, maua=maua, rp=rp, rgs=rgs)
