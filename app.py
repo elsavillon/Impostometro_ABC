@@ -21,19 +21,19 @@ def busca():
         try:
             municipio = request.form['nome']
             if municipio == "Santo André":
-                return render_template('sa.html', sa_impostos_municipais=impostos_municipais['sa'])
+                return render_template('sa.html')
             elif municipio == "São Bernardo do Campo":
-                return render_template('sbc.html', sbc_impostos_municipais=impostos_municipais['sbc'])
+                return render_template('sbc.html')
             elif municipio == "São Caetano do Sul":
-                return render_template('scs.html', scs_impostos_municipais=impostos_municipais['scs'])
+                return render_template('scs.html')
             elif municipio == 'Diadema':
-                return render_template('diadema.html', diadema_impostos_municipais=impostos_municipais['diadema'])
+                return render_template('diadema.html')
             elif municipio == 'Mauá':
-                return render_template('maua.html', maua_impostos_municipais=impostos_municipais['maua'])
+                return render_template('maua.html')
             elif municipio == "Ribeirão Pires":
-                return render_template('rp.html', rp_impostos_municipais=impostos_municipais['rp'])
+                return render_template('rp.html')
             elif municipio == "Rio Grande da Serra":
-                return render_template('rgs.html', rgs_impostos_municipais=impostos_municipais['rgs'])
+                return render_template('rgs.html')
             else:
                 return 'Município não encontrado.'
         except Exception as e:
